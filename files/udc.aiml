@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+    
+    <!-- Intro -->
+    <category>
+        <pattern>HELLO</pattern>
+        <template> <image>https://media.giphy.com/media/G3FNI3FneNjiw/giphy.gif</image>
+        Dattebayo! Welcome to UzumakiBot!<split></split>
+        Do you want to learn more about some of your favorite Naruto Characters?</template>
+    </category>
+    
+    <!-- Substitutions for Intro --> 
+    <category>
+        <pattern>HI</pattern>
+        <template><srai>HELLO</srai></template>
+    </category>
+    <category>
+        <pattern>HEY</pattern>
+        <template><srai>HELLO</srai></template>
+    </category>
+    <category>
+        <pattern>HI THERE</pattern>
+        <template><srai>HELLO</srai></template>
+    </category>
+    <category>
+        <pattern>HOLA</pattern>
+        <template><srai>HELLO</srai></template>
+    </category>
+    
+    <!-- Intro Response - YES -->
+    <category>
+        <pattern>YES</pattern>
+        <that>LT SPLIT GT LT SLASH SPLIT GT DO YOU WANT TO LEARN MORE ABOUT SOME OF YOUR FAVORITE NARUTO CHARACTERS</that>
+        <template> <image>https://media.giphy.com/media/3iAdf4po4DmCwItLgO/giphy.gif</image>Which Do you Want to know about?
+        <button>
+            <text>The Main Characters</text>
+            <postback>CHARACTERS</postback>
+        </button>
+        <button>
+            <text>A Random Fact</text>
+            <postback>RANDOMFACT</postback>
+        </button>
+        <button>
+            <text>Which show to watch based on your age</text>
+            <postback>SHOWSELECT</postback>
+        </button>
+        </template>
+    </category>
+    
+    <!-- Substitutions for YES response-->
+    <category>
+        <pattern>YEA</pattern>
+        <template><srai>YES</srai></template>
+    </category>
+    <category>
+        <pattern>SURE</pattern>
+        <template><srai>YES</srai></template>
+    </category>
+ 
+ <!--
+    <category>
+        <pattern>CHARACTERS</pattern>
+        <template>
+            <carousel>
+                <card>
+                    <image>https://static.wikia.nocookie.net/naruto/images/d/d6/Naruto_Part_I.png/revision/latest/scale-to-width-down/300?cb=20210223094656</image>
+                    <title>Naruto Uzumaki</title>
+                    <subtitle>Role: The main character of the show <br></br>Birthday: October 10<br></br>Chakra Nature: Wind</subtitle>
+                    <button>
+                        <text>Next</text>
+                        <postback></postback>
+                    </button>
+                </card>
+           
+                <card>
+                    <image>https://static.wikia.nocookie.net/naruto/images/2/21/Sasuke_Part_1.png/revision/latest/scale-to-width-down/300?cb=20170716092103</image>
+                    <title>Sasuke Uchiha</title>
+                    <subtitle>Role: The Last Uchiha and Naruto's Best Friend<br></br>Birthday: July 23<br></br>Chakra Nature: Fire/Lightning</subtitle>
+                    <button>
+                        <text>Next</text>
+                        <postback></postback>
+                    </button>
+                </card>
+                
+                <card>
+                    <image>https://static.wikia.nocookie.net/naruto/images/6/64/Sakura_Part_1.png/revision/latest/scale-to-width-down/300?cb=20170726101444</image>
+                    <title>Sakura Haruno</title>
+                    <subtitle>Role: Medical Nin<br></br>Birthday: March 28<br></br>Chakra Nature: Earth</subtitle>
+                    <button>
+                        <text>Next</text>
+                        <postback></postback>
+                        
+                    </button>
+                </card>
+                
+                <card>
+                    <image>https://static.wikia.nocookie.net/naruto/images/2/27/Kakashi_Hatake.png/revision/latest/scale-to-width-down/300?cb=20170628120149</image>
+                    <title>Kakashi Hatake</title>
+                    <subtitle>Role: Team 7 Leader and Former Anbu<br></br>Birthday:September 15<br></br>Chakra Nature: Lightning</subtitle>
+                    <button>
+                        <text>Next</text>
+                        <postback></postback>
+                    </button>
+                </card>
+                
+                <card>
+                    <image>https://static.wikia.nocookie.net/naruto/images/b/bb/Itachi.png/revision/latest/scale-to-width-down/300?cb=20160125182202</image>
+                    <title>Itachi Uchiha</title>
+                    <subtitle>Role: Ex Anbu, Protector of the Leaf, Sasuke's Older Brother<br></br>Birthday: June 9<br></br>Chakra Nature: Fire/Wind</subtitle>
+                    <button>
+                        <text>END</text>
+                        <postback>CONTINUE</postback>
+                    </button>
+                </card>
+                
+            </carousel>
+        </template>
+    </category>
+  -->  
+    
+    <!-- Random Facts -->
+    <category>
+        <pattern>RANDOMFACT</pattern>
+        <template>
+            <random>
+                <ul>
+                    <li>
+                        <image>https://qph.fs.quoracdn.net/main-qimg-bdc834ed6919792677687c06ea762802-lq</image>The four ninja rankings in Naruto: Genin, Chunin, Jounin, and Hokage.
+                    </li>
+                    <li>
+                         <image>https://media.giphy.com/media/owttbF6yCrQCLmn95E/giphy.gif</image>The Anbu are Black op ninjas and are a tactical squad of assassins
+                    </li>
+                    <li>
+                        <image>https://media.giphy.com/media/EOp8jfoL21DMc/giphy.gif</image>The Akatsuki is a group of vigilantes who’s members include Itachi Uchiha, Kisama Hoshigaki, Deidara, Hidan, Kakuzu, and Konan
+                    </li>
+                    <li>
+                        <image>https://qph.fs.quoracdn.net/main-qimg-57177248f784bd54505c278af49c7393</image>The Akatsuki was founded by Yahiko, Konan, Nagato
+                    </li>
+                    <li>
+                         <image>https://media.giphy.com/media/8pa4j1W3qushy/giphy.gif</image>Many of the episodes were fillers that gave the creator more time to produce manga chapters (so you dont have to watch them all)
+                    </li>
+                    <li>
+                        <image>https://media.giphy.com/media/eemPC4yhITcTm/giphy.gif</image>Naruto is a mixture between Japanese and Chinese mythology; along with Buddhist and Hinduism teachings
+                    </li>
+                    <li>
+                        <image>https://qph.fs.quoracdn.net/main-qimg-aadaefea802744b10ac843d911d62281</image>The chakra energy that ninja are able to harness have seven natures: Earth, Fire, Air, Water, and Lighting, Yin and Yang
+                    </li>
+                    <li>
+                        <image>https://media.giphy.com/media/T87xCP8500aVG/giphy.gif</image> The hand seals the ninja use have origin in Chinese zodiac
+                    </li>
+                    <li>
+                        <image>https://external-preview.redd.it/Kea0mQFSwYYIT24ccmlpihDne50RimhF6_1CMmt5uIs.jpg?auto=webp&s=93a5479743b880be881ffb4890562b7c6c81b900</image>Jinchuriki are humans that have a tailed beast sealed inside of them
+                    </li>
+                    <li>
+                         <image>https://media.giphy.com/media/RTp3RsNNdq37y/giphy.gif</image>Naruto’s favorite ramen shop “Ichiraku” exists in Kyushu, Japan
+                    </li>
+                </ul>
+            </random>
+        </template>
+    </category>
+    
+    <!-- Show Selection -->
+    <category>
+        <pattern>SHOWSELECT</pattern>
+        <template></template>
+    </category>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- CONTINUE??? How do i get it to point back to the INTRO RESPONSE YES? -->
+    <category>
+        <pattern>CONTINUE</pattern>
+        <template>
+            <image>https://media.giphy.com/media/xTiN0IuPQxRqzxodZm/giphy.gif</image>
+            Do you want know more about Naruto?</template>
+    </category>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  <category>
+    <pattern>*</pattern>
+    <template>I have no answer for that.</template>
+  </category>
+</aiml>
